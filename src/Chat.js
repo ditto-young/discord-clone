@@ -50,8 +50,12 @@ function Chat() {
             <ChatHeader channelName={channelName}/>
 
             <div className="chat__messages">
-                {messages.map((massage) => (
-                    <Message/>
+                {messages.map((message) => (
+                    <Message
+                        timestamp={message.timestamp}
+                        message={message.message}
+                        user={message.user}
+                    />
                 ))}
             </div>
 
